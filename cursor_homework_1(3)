@@ -1,0 +1,59 @@
+from abc import ABC, abstractmethod
+
+class Interface(ABC):
+    @abstractmethod
+    def screen(self):
+        pass
+
+    @abstractmethod
+    def keyboard(self):
+        pass
+
+    @abstractmethod
+    def touchpad(self):
+        pass
+
+
+    @abstractmethod
+    def webcam(self):
+        pass
+
+
+    @abstractmethod
+    def ports(self):
+        pass
+
+
+    @abstractmethod
+    def dynamics(self):
+        pass
+
+
+class HPLaptop(Interface):
+
+    def screen(self):
+        print("1920 * 1080")
+
+    def keyboard(self):
+        print('Mechanic')
+
+    def touchpad(self):
+        print("Adaptive")
+
+    def webcam(self):
+        print("10mpx")
+
+    def ports(self):
+        print("3 usb ports 3.1 ")
+
+    def dynamics(self):
+        print("HP basic dynamics")
+
+laptop = HPLaptop()
+
+laptop.screen()
+laptop.keyboard()
+laptop.ports()
+laptop.touchpad()
+laptop.webcam()
+laptop.dynamics()
