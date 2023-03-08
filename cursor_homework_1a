@@ -1,0 +1,33 @@
+class Human:
+
+    def __init__(self,name):
+        self.name = name
+
+
+    def eating(self):
+        print(self.name + ' have a dinner!')
+
+    def sleep(self):
+        print(self.name + ' is sleeping right now!')
+
+    def study(self):
+        print(self.name + ' is studying right now!')
+
+    def work(self):
+        print(self.name + ' is working right now!')
+
+class Animal:
+
+    def __init__(self, name):
+        self.name = name
+
+    def hunting(self):
+        print(self.name + ' is hunting')
+
+class Centaur(Human,Animal):
+
+    def evolve(self):
+        print(self.name + ' is evolving')
+
+c = Centaur("Grisha")
+c.evolve()
