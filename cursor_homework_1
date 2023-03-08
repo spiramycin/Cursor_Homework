@@ -1,0 +1,53 @@
+class Animal:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def eat(self):
+        print(self.name + ' with age ' + self.age + ' years old is eating.')
+
+    def sleep(self):
+        print(self.name + ' with age ' + self.age + ' years old is sleeping.')
+
+    def evolution(self):
+        print(self.name + ' with age ' + self.age + ' is evolving now.')
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print(self.name + ' with age ' + self.age + ' years old is barking.')
+
+    def play(self):
+        print(self.name + ' with age ' + self.age + ' years old is playing.')
+
+
+class Cat(Animal):
+
+    def scratch(self):
+        print(self.name + ' with age ' + self.age + ' years old is scratching the furniture.')
+
+    def maaay(self):
+        print(self.name + ' with age ' + self.age + ' years old is maaaying near the house.')
+
+
+class Eagle(Animal):
+
+    def looking_for_victim(self):
+        print(self.name + ' with age ' + self.age + ' years old is looking for you')
+
+class Wolf(Animal):
+
+    def hunting(self):
+        print(self.name + ' with age ' + self.age + ' years old is hunting')
+
+    def deduct(self):
+        print(self.name + ' with age ' + self.age + ' years old is deduct to the moon')
+
+class Rabbit(Animal):
+
+    def licking(self):
+        print(self.name + ' with age ' + self.age + ' years old is licking grout!')
+
+
