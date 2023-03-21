@@ -1,0 +1,25 @@
+SELET * FROM employees;
+
+SELECT * FROM employees WHERE first_name = "David";
+
+SELECT * FROM employees WHERE department_id = 20 OR department_id = 30;
+
+SELECT * FROM employees WHERE department_id = 50 OR department_id = 80 AND commission_pct != 0;
+
+SELECT * FROM employees WHERE YEAR(hire_date) = "2008";
+
+SELECT DATE_FORMAT(DATE_ADD(CURRENT_DATE(), INTERVAL 1 DAY), 'Tomorrow is %D day of %M');
+
+SELECT first_name, last_name,  CONCAT(DATE_FORMAT(hire_date, "%D of %M, %Y")) FROM employees;
+
+SELECT first_name, last_name,  CONCAT("$", salary *1.2) as good_salary FROM employees;
+
+SELECT NOW(), DATE_ADD(DATE_ADD(DATE_ADD(DATE_ADD(NOW(), INTERVAL 1 SECOND), INTERVAL 1 MINUTE), INTERVAL 1 HOUR), INTERVAL 1 DAY);
+
+SELECT NOW(), DATE_ADD(DATE_ADD(DATE_ADD(DATE_ADD(DATE_ADD(DATE_ADD(NOW(), INTERVAL 1 SECOND), INTERVAL 1 MINUTE), INTERVAL 1 HOUR), INTERVAL 1 DAY),INTERVAL 1 MONTH), INTERVAL 1 YEAR);
+
+SELECT CONCAT("$ ",FORMAT(salary + (salary*commission_pct)/100,2)) FROM employees;
+
+SELECT first_name, last_name,  (CASE WHEN commission_pct is NOT NULL THEN "YES" WHEN  commission_pct is NULL THEN "NO" END) AS extra_payment FROM employees;
+
+
