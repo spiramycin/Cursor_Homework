@@ -8,6 +8,8 @@ SELECT * FROM employees WHERE department_id = 50 OR department_id = 80 AND commi
 
 SELECT * FROM employees WHERE YEAR(hire_date) = "2008";
 
+SELECT * FROM employees WHERE DAY(hire_date) ='01';
+
 SELECT DATE_FORMAT(DATE_ADD(CURRENT_DATE(), INTERVAL 1 DAY), 'Tomorrow is %D day of %M');
 
 SELECT first_name, last_name,  CONCAT(DATE_FORMAT(hire_date, "%D of %M, %Y")) FROM employees;
